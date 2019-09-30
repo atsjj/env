@@ -1,0 +1,26 @@
+{
+  "name": "@atsjj/env",
+  "version": "0.0.0",
+  "description": "Structured way to fetch environment variables",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "postbuild": "cp -R LICENSE package.json package-lock.json README.md dist",
+    "release": "release-it"
+  },
+  "author": "Steve Jabour <steve@jabour.me> (https://github.com/atsjj)",
+  "license": "MIT",
+  "readme": "README.md",
+  "repository": "git://github.com/atsjj/env.git",
+  "devDependencies": {
+    "auto-changelog": "^1.16.1",
+    "release-it": "^12.4.1",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}

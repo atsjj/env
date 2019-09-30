@@ -1,0 +1,7 @@
+{
+  "commitLimit": false,
+  "output": "CHANGELOG.md",
+  "package": "package.json",
+  "releaseSummary": true,
+  "template": ".auto-changelog.hbs"
+}

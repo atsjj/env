@@ -1,0 +1,13 @@
+{{#each releases}}
+  {{#if @first}}
+    {{#each merges}}
+      * ({{id}}) {{{message}}}
+    {{/each}}
+    {{#each fixes}}
+      * {{{commit.subject}}}{{#each fixes}} ({{id}}){{/each}}
+    {{/each}}
+    {{#each commits}}
+      * ({{shorthash}}) {{#if breaking}}**Breaking change:** {{/if}}{{{subject}}}
+    {{/each}}
+  {{/if}}
+{{/each}}

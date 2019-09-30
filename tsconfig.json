@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "outDir": "dist",
+    "target": "es2018",
+    "lib": [
+      "es2018"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "src",
+    "tmp"
+  ],
+  "include": [
+    "index.ts",
+    "lib/**/*.ts"
+  ]
+}

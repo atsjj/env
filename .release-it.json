@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "after:bump": [
+      "auto-changelog",
+      "npm run build"
+    ],
+    "after:release": [
+      "rm -rf dist"
+    ]
+  },
+  "git": {
+    "changelog": "auto-changelog --stdout --template .auto-changelog-compact.hbs",
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true,
+    "requireCommits": false,
+    "addUntrackedFiles": false,
+    "commit": true,
+    "commitMessage": "${version}",
+    "commitArgs": "--gpg-sign",
+    "tag": true,
+    "tagName": "${version}",
+    "tagAnnotation": "${version}",
+    "tagArgs": "--sign",
+    "push": true,
+    "pushArgs": "--follow-tags",
+    "pushRepo": "origin"
+  },
+  "npm": {
+    "publish": true,
+    "publishPath": "dist",
+    "access": "public"
+  }
+}
