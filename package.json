@@ -1,6 +1,6 @@
 {
   "name": "@atsjj/env",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Structured way to fetch environment variables",
   "main": "index.js",
   "types": "index.d.ts",
